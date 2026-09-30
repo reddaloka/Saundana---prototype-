@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saundana — Music rewards</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f7f3ef;margin:0;color:#171717}.wrap{max-width:430px;margin:auto;padding:18px}
+header{display:flex;justify-content:space-between;align-items:center}.logo{font-size:28px;font-weight:800}.pill{background:#171717;color:white;padding:8px 12px;border-radius:20px}
+.card{background:white;border-radius:22px;padding:20px;margin:14px 0;box-shadow:0 5px 20px #00000010}.hero{background:#d71920;color:white}.small{font-size:13px;opacity:.75}.points{font-size:38px;font-weight:800;margin:5px 0}.row{display:flex;justify-content:space-between;gap:10px}.btn{display:block;text-align:center;background:#171717;color:white;padding:13px;border-radius:14px;text-decoration:none;margin-top:12px}.hero .btn{background:white;color:#171717}
+.avatar{width:54px;height:54px;border-radius:50%;background:#171717;display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:bold}
+.reward{border:1px solid #eee;border-radius:15px;padding:14px;margin-top:10px}.bar{height:9px;background:#eee;border-radius:10px;overflow:hidden}.fill{height:100%;background:#d71920;width:68%}
+nav{display:flex;gap:8px;margin:18px 0}nav button{flex:1;padding:11px;border:0;border-radius:12px;background:#e8e2dc}nav button.active{background:#171717;color:white}
+.section{display:none}.section.active{display:block}
+</style></head>
+<body><div class="wrap">
+<header><div class="logo">SAUNDANA</div><div class="pill">Fan view</div></header>
+<nav><button class="active" onclick="show('fan',this)">Fan</button><button onclick="show('artist',this)">Artist</button></nav>
+
+<div id="fan" class="section active">
+<div class="card hero"><div class="small">YOUR SAUNDANA POINTS</div><div class="points">4,820</div><div>Keep supporting Bensoul 🎶</div><a class="btn" href="#">View rewards</a></div>
+<div class="card"><div class="row"><div><b>Bensoul</b><div class="small">Your fan journey</div></div><div class="avatar">B</div></div><p><b>You're one of Bensoul's top fans.</b> 🔥</p><div class="small">Next reward: concert ticket</div><div class="bar"><div class="fill"></div></div><p class="small">4,820 / 5,000 points</p></div>
+<div class="card"><b>Ways to earn</b><div class="reward">🎧 Verified stream <b>+1</b></div><div class="reward">➕ Follow / playlist action <b>+25</b></div><div class="reward">🎤 Attend a show <b>+500</b></div></div>
+</div>
+
+<div id="artist" class="section">
+<div class="card hero"><div class="small">BEN SOUL — ARTIST DASHBOARD</div><div class="points">18,420</div><div>Fans engaged this month</div></div>
+<div class="card"><b>Fan community</b><div class="row" style="margin-top:15px"><div><b>12,840</b><div class="small">Verified fans</div></div><div><b>2,340</b><div class="small">Super fans</div></div></div></div>
+<div class="card"><b>Reward your fans</b><div class="reward">🎟️ Concert ticket — 5,000 pts</div><div class="reward">👕 Signed merch — 8,000 pts</div><div class="reward">⭐ Meet & greet — 15,000 pts</div><a class="btn" href="#">Create a reward</a></div>
+<div class="card"><b>Fan insights</b><p class="small">See which fans are supporting you most, what rewards motivate them, and who is close to redeeming.</p></div>
+</div>
+<p class="small" style="text-align:center;margin:25px 5px">Early concept • Stream verification and rewards would require platform, artist and/or partner integrations.</p>
+</div>
+<script>function show(id,b){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}</script>
+</body></html>
